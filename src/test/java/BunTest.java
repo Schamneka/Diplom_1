@@ -9,13 +9,13 @@ public class BunTest {
     private Bun bun;
 
     @Before
-    public void createNewInstance{
+    public void createNewInstance(){
         bun = new Bun("Краторная", 200.0f);
 
     }
 
     @Test
-    public void getName{
+    public void getName(){
         String expected = "Краторная";
         String actual = bun.getName();
 
@@ -23,7 +23,7 @@ public class BunTest {
     }
 
     @Test
-    public void getPrice{
+    public void getPrice(){
         float expected = 200.0f;
         float actual = bun.getPrice();
 

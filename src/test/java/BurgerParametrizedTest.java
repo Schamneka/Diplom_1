@@ -21,16 +21,16 @@ public class BurgerParametrizedTest {
 
     @Before
     public void createNewInstance() {
-        sauce = new Ingredient(IngredientType.SAUCE, "chili", 20.0f);
+        sauce = new Ingredient(IngredientType.SAUCE, "chili sauce", 20.0f);
         filling = new Ingredient(IngredientType.FILLING, "cheese", 15.5f);
         burger = new Burger();
     }
 
-    @Parameterized.Parameters(name = "{index} : price = {1}")
+    @Parameterized.Parameters()
     public static Object[][] getBunData() {
         return new Object[][] {
-                {"original-free", 0.0f},
-                {"original", 200.0f}
+                {"Флюорисцентная", 0.0f},
+                {"Краторная", 200.0f}
         };
     }
 
@@ -43,6 +43,6 @@ public class BurgerParametrizedTest {
         float expected = bun.price * 2 + sauce.price + filling.price;
         float actual = burger.getPrice();
 
-        assertEquals("Incorrect values burger price", expected, actual, 0);
+        assertEquals("Неверные значения цены бургера", expected, actual, 0);
     }
 }

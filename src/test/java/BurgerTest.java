@@ -31,7 +31,7 @@ public class BurgerTest {
         burger.setBuns(bun);
         Bun actual = burger.bun;
 
-        assertEquals("Incorrect introduction of the bun dependency into the burger", bun, actual);
+        assertEquals("Неправильное добавление булочки в бургер", bun, actual);
     }
 
     @Test
@@ -40,7 +40,7 @@ public class BurgerTest {
         List<Ingredient> expected = List.of(ingredient);
         List<Ingredient> actual = burger.ingredients;
 
-        assertEquals("Incorrect addition of an ingredient in the list", expected, actual);
+        assertEquals("Неправильное добавление ингредиента в список", expected, actual);
     }
 
     @Test
@@ -49,7 +49,7 @@ public class BurgerTest {
         burger.removeIngredient(0);
         List<Ingredient> actual = burger.ingredients;
 
-        assertEquals("Incorrect removal of an ingredient in the list", List.of(), actual);
+        assertEquals("Неправильное удаление ингредиента из списка", List.of(), actual);
     }
 
     @Test
@@ -59,17 +59,17 @@ public class BurgerTest {
         burger.moveIngredient(0, 1);
         Ingredient actual = burger.ingredients.get(1);
 
-        assertEquals("Incorrect movement of an ingredient in the list", filling, actual);
+        assertEquals("Неправильное расположение ингредиента в списке", filling, actual);
     }
 
     @Test
     public void getReceipt() {
-        Mockito.when(bun.getName()).thenReturn("original");
+        Mockito.when(bun.getName()).thenReturn("Краторная");
         Mockito.when(bun.getPrice()).thenReturn(200.0f);
         burger.setBuns(bun);
 
         Mockito.when(ingredient.getType()).thenReturn(IngredientType.SAUCE);
-        Mockito.when(ingredient.getName()).thenReturn("chili");
+        Mockito.when(ingredient.getName()).thenReturn("chili sauce");
         Mockito.when(ingredient.getPrice()).thenReturn(20.0f);
         burger.addIngredient(ingredient);
 
@@ -87,6 +87,6 @@ public class BurgerTest {
         String expected = receipt.toString();
         String actual = burger.getReceipt();
 
-        assertEquals("Incorrect burger receipt", expected, actual);
+        assertEquals("Неправильный рецепт бургера", expected, actual);
     }
 }
