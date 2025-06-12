@@ -24,8 +24,8 @@ public class BunTest {
 
     @Test
     public void getPrice{
-        String expected = 200.0f;
-        String actual = bun.getPrice();
+        float expected = 200.0f;
+        float actual = bun.getPrice();
 
         assertEquals("Неверная цена булочки", expected, actual, 0);
     }
