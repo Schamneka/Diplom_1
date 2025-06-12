@@ -1,4 +1,4 @@
-import praktikum.*;
+package praktikum;
 
 import org.junit.Test;
 import org.junit.Before;
@@ -26,7 +26,7 @@ public class BurgerParametrizedTest {
         burger = new Burger();
     }
 
-    @Parameterized.Parameters()
+    @Parameterized.Parameters(name = "{index} : price = {1}")
     public static Object[][] getBunData() {
         return new Object[][] {
                 {"Флюорисцентная", 0.0f},

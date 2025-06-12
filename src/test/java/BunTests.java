@@ -1,11 +1,11 @@
-import praktikum.Bun;
+package praktikum;
 
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 
-public class BunTest {
+public class BunTests {
     private Bun bun;
 
     @Before

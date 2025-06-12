@@ -1,4 +1,4 @@
-import praktikum.*;
+package praktikum;
 
 import java.util.List;
 import org.junit.Test;
@@ -10,7 +10,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(MockitoJUnitRunner.class)
-public class BurgerTest {
+public class BurgerTests {
     @Mock
     private Bun bun;
     @Mock

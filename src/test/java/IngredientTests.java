@@ -1,10 +1,10 @@
-import praktikum.*;
+package praktikum;
 
 import org.junit.Test;
 import org.junit.Before;
 import static org.junit.Assert.assertEquals;
 
-public class IngredientTest {
+public class IngredientTests {
     private Ingredient ingredient;
 
     @Before
